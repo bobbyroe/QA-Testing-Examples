@@ -1,0 +1,47 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+  Various text inputs
+</h1>
+
+<fieldset>
+  <legend>Enter your personal information</legend>
+  
+  <label for="email">T-mobile.com email <span class="required">Required</span></label>
+  <input type="email" id="email" placeholder="name@email.com" pattern=".+@t-mobile.com" size="35" required>
+
+  <label for="phone-number">Phone number <span class="required">Required</span></label>
+  <input type="tel" id="phone-number" inputmode="numeric" name="phone" aria-describedby="phone-tip" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+  <div role="tooltip" id="phone-tip" class="input-tooltip">Format: 555-123-4567</div>
+  
+  <label for="username">Username <span class="required">Required</span></label>
+  <input type="text" id="username" name="username" required>
+
+  <label for="password">Password (8 characters minimum) <span class="required">Required</span></label>
+
+  <div class="password-container">
+    <input type="password" id="password" name="password" minlength="8" required>
+    <input type="checkbox" id="show-password" class="show-password">
+    <label for="show-password">
+      Show Password
+    </label>
+  </div>
+  
+</fieldset>
+
+
+<fieldset>
+  <legend>Comments and Feedback</legend>
+  <p>Let us know what you think</p>
+  <div class="textarea-group">
+    <label for="customer-comments">
+      Your comment
+    </label>
+    <textarea id="customer-comments" placeholder="Type feedback here..."></textarea>
+  </div>
+</fieldset>
+
+
+{% endblock content %}

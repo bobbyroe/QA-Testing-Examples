@@ -1,0 +1,22 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+  Select styled with CSS
+</h1>
+<p>
+  A selects must identify its name, role and option state. We start by letting the screenreader read on its own. Then we'll interact with elements from the top manually.</p>
+</p>
+<div class="select-container">
+  <label for="selectAlpha">Select a NATO Phoenetic Letter</label>
+  <select id="selectAlpha">
+    <option label="None" disabled selected>None</option>
+    <option label="Alpha">Alpha</option>
+    <option label="Bravo">Bravo</option>
+    <option label="Charlie">Charlie</option>
+    <option label="Delta">Delta</option>
+  </select>
+</div>
+  
+{% endblock content %}

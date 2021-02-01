@@ -1,0 +1,31 @@
+input[type="file"] {
+  @extend .hidden;
+  + label {
+    @extend .button-alpha;
+    display: inline-block;
+    padding-right: 2rem;
+    
+    &:before {
+      height: 2rem;
+      width: 3rem;
+      top: .5rem;
+      left: 1rem;
+      transform: rotate(0deg);
+      transition: .2s;
+      opacity: 1;
+      background-image: url("data:image/svg+xml,%0A%3Csvg height='100px' width='100px' fill='white' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Cpath d='M88.879,63.641c0.152-0.953,0.254-1.921,0.254-2.916c0-7.937-5.055-14.675-12.112-17.224 c-2.952-12.916-14.504-22.555-28.314-22.555c-13.496,0-24.839,9.203-28.104,21.675C11.776,43.941,5,51.531,5,60.725 c0,10.123,8.207,18.328,18.329,18.328h22.312V58.22H34.866L50.657,41.78L66.449,58.22H55.673v20.833H87.2 c4.308,0,7.8-3.49,7.8-7.799C95,67.523,92.379,64.409,88.879,63.641z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  &:focus,
+  &:hover {
+    + label {
+      background-color: $color-button-focus;
+      @extend %focused;
+      &:before {
+        top: .125rem;
+      }
+    }
+  }
+}

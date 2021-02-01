@@ -1,0 +1,54 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+<h1 class="h-charlie">
+  Accordion "Radio" Group
+</h1>
+
+<p>This accordion radio group uses checkboxes with role="radio" and minimal scripting to act like radio inputs</p>
+
+<fieldset>
+  <legend>Choose your plan:</legend>
+  <!-- This div extra div is only here because Chrome won't apply grid styles to a fieldset. I would probabaly put this in a list anyway -->
+  <div class="expander-group">
+    <input class="radio" type="checkbox" role="radio" name="expanderList" id="expanderAlpha" aria-describedby="expanderDescAlpha" checked>
+    <label for="expanderAlpha">
+      Plan Alpha<span class="hidden">,</span>
+      <span class="pricing">Free</span></label>
+    <button type="button" class="expander-toggle" aria-expanded="false">
+      <span class="hidden">Plan Alpha Description</span>
+    </button>
+    <div class="expander-content" id="expanderDescAlpha" aria-hidden="true">
+      <p>This extra text is descriptive of Plan Alpha.</p>
+    </div>
+
+    <input  class="radio" type="checkbox" role="radio" name="expanderList" id="expanderBravo" aria-describedby="expanderDescBravo">
+    <label for="expanderBravo">
+      Plan Bravo<span class="hidden">,</span>
+      <span class="pricing">$10.00/mo</span>
+    </label>
+    <button type="button" class="expander-toggle" aria-expanded="false">
+      <span class="hidden">Plan Bravo Description</span>
+    </button>
+
+    <div class="expander-content" id="expanderDescBravo" aria-hidden="true">
+      <p>This extra text is descriptive of Plan Bravo.</p>
+    </div>
+
+    <input class="radio" type="checkbox" role="radio" name="expanderList" id="expanderCharlie" aria-describedby="expanderDescCharlie">
+    <label for="expanderCharlie">
+      Plan Charlie<span class="hidden">,</span>
+      <span class="pricing">$20.00/mo</span>
+
+    </label>
+    <button type="button" class="expander-toggle" aria-expanded="false">
+      <span class="hidden">Plan Charlie Description. Duis aute irure dolor in reprehenderit in voluptate velit. </span>
+    </button>
+
+    <div class="expander-content" id="expanderDescCharlie" aria-hidden="true">
+      <p>This extra text is descriptive of Plan Charlie.</p>
+    </div>
+  </div>
+</fieldset>
+
+{% endblock content %}

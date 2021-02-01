@@ -1,0 +1,151 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Make page zoomable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Appears as search results links -->
+    <title>
+      
+        This is a web page
+      
+    </title>
+    <!-- Appears as search results description -->
+    <meta name="description" content="Sanity check for all the html elements" />
+    <link href="/assets/styles/index.processed.css" rel="stylesheet">
+  </head>
+<body>
+<div class="page-container">
+
+<!--   
+<div class="skip-links container">
+  <a href="#nav-primary">Skip to Navigation</a>  
+  <a href="#content">Skip to Main Content</a>  
+  <a href="#footer">Skip to Footer</a>
+</div>
+ -->
+
+<div class="container" id="content" tabindex="-1">
+  
+<h3 class="h-charlie">
+  Accordion "Radio" Group
+</h3>
+
+<p>This accordion radio group uses checkboxes with role="radio" and minimal scripting to mostly act like radio inputs. Very careful relationships are built between the radio inputs, code hints and expanders.</p>
+
+<fieldset class="payment-options">
+  <legend>Payment options</legend>
+  <!-- This div extra div is only here because Chrome won't apply grid styles to a fieldset. I would probabaly put this in a list anyway -->
+  <input class="radio" type="checkbox" role="radio" name="expanderList" id="expanderAlpha" aria-describedby="hintAlpha" checked>
+  <label for="expanderAlpha">
+    24 monthly payments<span class="hidden">,</span>
+    <span class="pricing">$22.63/mo</span>
+  </label>
+  <div class="hint" id="hintAlpha">
+     At vero eos et accusamus. Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi.
+    <details>
+      <summary>2 available offers <span class="hidden">for 24 monthly payments option</span></summary>
+      <p>Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. At vero eos et accusamus. At vero eos et accusamus. </p>
+      <p><a href="#">Link to some thing</a></p>
+      <p>Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
+      <p><a href="#">Link to some other thing</a></p>
+    </details>
+  </div>
+  
+  <input  class="radio" type="checkbox" role="radio" name="expanderList" id="expanderBravo" aria-describedby="hintBravo">
+  <label for="expanderBravo">
+    18 monthly payments<span class="hidden">,</span>
+    <span class="pricing">$34.86/mo</span>
+  </label>
+  <div class="hint" id="hintBravo">
+     At vero eos et accusamus. Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi.
+    <details>
+    <summary>2 available offers <span class="hidden">for 18 monthly payments option</span></summary>
+      <p>Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. At vero eos et accusamus. At vero eos et accusamus. </p>
+      <p><a href="#">Link to some thing</a></p>
+      <p>Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
+      <p><a href="#">Link to some other thing</a></p>
+    </details>
+  </div>
+  <input class="radio" type="checkbox" role="radio" name="expanderList" id="expanderCharlie" aria-describedby="">
+  <label for="expanderCharlie">
+    Pay in full<span class="hidden">,</span>
+    <span class="pricing">$799.00/mo</span>
+  </label>
+
+</fieldset>
+
+
+
+<fieldset class="payment-options">
+  
+  <legend>Payment options (Simple Alternative)</legend>
+  
+  <input type="radio" name="paymentOptionsAlt" id="radioAlpha" aria-describedby="radioHintAlpha">
+  <label for="radioAlpha">
+    24 monthly payments<span class="hidden">,</span>
+    <span class="pricing">$22.63/mo</span>
+  </label>
+  <div class="hint" id="radioHintAlpha">
+     At vero eos et accusamus. Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi.
+  </div>
+
+
+  <input type="radio" name="paymentOptionsAlt" id="radioBravo" aria-describedby="radioHintBravo">
+  <label for="radioBravo">
+    18 monthly payments<span class="hidden">,</span>
+    <span class="pricing">$34.86/mo</span>
+  </label>
+  <div class="hint" id="radioHintBravo">
+     At vero eos et accusamus. Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi.
+  </div>
+  
+  <input type="radio" name="paymentOptionsAlt" id="radioCharlie">
+  <label for="radioCharlie">
+    Pay in full<span class="hidden">,</span>
+    <span class="pricing">$799.00/mo</span>
+  </label>
+
+    
+  <div class="hint offer display-none" id="radioAlphaOffers" role="alert" aria-live="polite">
+    <h3 class="h-charlie">2 available offers for 24 monthly payments</h3>
+    <p>Appears conditionally on which option is chosen. Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. At vero eos et accusamus. At vero eos et accusamus. </p>
+    <p><a href="#">Link to some thing</a></p>
+    <p>Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
+    <p><a href="#">Link to some other thing</a></p>
+  </div>
+  
+  <div class="hint offer display-none" id="radioBravoOffers" role="alert" aria-live="polite">
+    <h3 class="h-charlie">2 available offers for 18 monthly payments</h3>
+    <p>Appears conditionally on which option is chosen. Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque. At vero eos et accusamus. At vero eos et accusamus. </p>
+    <p><a href="#">Link to some thing</a></p>
+    <p>Architecto beatae vitae dicta sunt explicabo. Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
+    <p><a href="#">Link to some other thing</a></p>
+  </div>
+  
+  
+</fieldset>
+
+<button type="button" class="button-alpha">
+    Complete purchase or whatever
+</button>
+
+</div>
+
+<div class="container" id="footer" tabindex="-1">
+  
+  
+<!--     <a href="https://codepen.io/charlietriplett/project/live/ZpWLBY">All components</a> -->
+    <a href="#content">Back to top of page</a>
+
+  
+</div> 
+</div><!-- end .page-container -->
+
+
+
+  
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/assets/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+<h3 class="h-charlie">
+  Table
+</h3>
+  
+  <p>This table uses a figure element to build a relationship between the data, the author and the source.</p>
+
+  <figure>
+    <table>
+      <caption>
+        Morse Code and NATO Phoenetic Alphabet Chart
+      </caption>
+      <thead>
+        <tr>
+          <th scope="row">
+            Letter
+          </th>
+          <th scope="column">
+            A
+          </th>
+          <th scope="column">
+            B
+          </th>
+          <th scope="column">
+            C
+          </th>
+          <th scope="column">
+            D
+          </th>
+          <th scope="column">
+            E
+          </th>
+          <th scope="column">
+            F
+          </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <th scope="row">
+            NATO
+          </th>
+          <td>
+            Alpha
+          </th>
+          <td>
+            Bravo
+          </td>
+          <td>
+            Charlie
+          </td>
+          <td>
+            Delta
+          </th>
+          <td>
+            Echo
+          </td>
+          <td>
+            Foxtrot
+          </td>
+     
+        </tr>
+      </tbody>
+    </table>
+    <figcaption>
+      Source: Juliet, <cite>Whiskey Tango Foxtrot</cite>
+    </figcaption>
+  </figure>
+ 
+
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+.payment-options {
+  details {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    border-radius: 0;
+    summary {
+      font-size: 1rem;
+   }
+  }
+  .hint {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid $color-border-gray;
+    margin-bottom: 1rem;
+    &.offer {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.display-none {
+  display: none;
+}

@@ -1,0 +1,23 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+  Radio buttons
+</h1>
+<p>
+  Radio inputs must identify its name, role and state. We start by letting the screenreader read on its own. Then we'll start at the top manually.</p>
+
+<fieldset>
+  <legend>Which is your favorite NATO letter:</legend>
+  
+  <input type="radio" name="paymentMethod" id="radioAlpha">
+  <label for="radioAlpha">Alpha</label>
+
+  <input type="radio" name="paymentMethod" id="radioBravo">
+  <label for="radioBravo">Bravo</label>
+
+  <input type="radio" name="paymentMethod" id="radioCharlie">
+  <label for="radioCharlie">Charlie</label>
+</fieldset>
+{% endblock content %}

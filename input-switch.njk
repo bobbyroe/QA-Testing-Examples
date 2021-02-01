@@ -1,0 +1,26 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+  Toggle switches
+</h1>
+
+<p>
+  Switch inputs must identify its name, role and state. We start by letting the screenreader read on its own. Then we'll start at the top manually.</p>
+</p>
+
+<fieldset>
+  <legend>Toggle your options:</legend>
+
+  <input role="switch" class="switch" type="checkbox" id="alpha">
+  <label for="alpha">Alpha</label>
+
+  <input role="switch" class="switch" type="checkbox" id="bravo">
+  <label for="bravo">Bravo</label>
+
+  <input role="switch" class="switch" type="checkbox" id="charlie">
+  <label for="charlie">Charlie</label>
+</fieldset>
+  
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+  Checkboxes
+</h1>
+<p>
+  Checkbox inputs must identify its name, role and state. We start by letting the screenreader read on its own. Then we'll start at the top manually.</p>
+</p>
+<fieldset>
+  <legend>Choose your favorites:</legend>
+  <input type="checkbox" name="paymentMethod" id="checkboxAlpha">
+  <label for="checkboxAlpha">Alpha</label>
+
+  <input type="checkbox" name="paymentMethod" id="checkboxBravo">
+  <label for="checkboxBravo">Bravo</label>
+
+  <input type="checkbox" name="paymentMethod" id="checkboxCharlie">
+  <label for="checkboxCharlie">Charlie</label>
+</fieldset>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-alpha">Buttons</h1>
+
+<h2 class="h-bravo">Normal button</h2>
+
+<p>A button must identify its purpose and role as button when focused.</p>
+
+<button class="button-alpha" type="button">
+  Get started
+</button>
+
+<h2 class="h-bravo">Disabled button</h2>
+<p>Disabled elements are <strong>not focusable or interactive</strong>, but the screenreader can still discover them.</p>
+
+<button class="button-alpha" type="button" disabled>
+  Continue
+</button>
+{% endblock content %}

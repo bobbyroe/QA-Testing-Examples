@@ -1,0 +1,23 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+   Search Input
+</h1>
+  
+<p>
+  A search input must identify its name and role and include a search button. We start by letting the screenreader read on its own. Then we'll start at the top manually.</p>
+</p>
+
+<form role="search" action="/search/">
+  <label for="site-search">
+    Search this website:
+  </label>
+  <input type="search" id="site-search" name="q" placeholder="Search">
+  <button class="site-search-submit" type="submit">
+    <span class="hidden">Search</hidden>
+  </button>
+</form>
+  
+{% endblock content %}

@@ -1,0 +1,60 @@
+.comparison-chart {
+  display: grid;
+  border-radius: 4px;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  background: #f5f5f5;
+  box-shadow: 0 0 4px 1px rgba(#000, .1);
+
+  
+  @include break(768px) {
+    grid-template-columns: 150px 1fr 1fr 1fr;
+  }
+  
+  li {
+    padding: 1rem;
+    font-weight: bold;
+    list-style-type: none;
+    position: relative;
+    
+    &.benefits {
+      background: #fff;
+      font-size: .9rem;
+      ul {
+        li {
+          
+        }
+      }
+    }
+    &.emphasized {
+      box-shadow: 0 0 4px 1px rgba(#000, .2);
+      z-index: 9;
+      background: #fff;
+      grid-row: 1;
+      @include break(768px) {
+        grid-row: auto;
+        margin-top: -1rem;
+        padding-top: 2rem;
+        margin-bottom: -1rem;
+      }     
+    }
+    
+    ul {
+      margin: 1rem 0 0 0;
+      padding: 0;
+      font-weight: normal;
+      border-top: 2px solid #000;
+      
+      li {
+        list-style-type: none;
+        margin: 0;
+        font-weight: normal;
+        padding: 1rem;
+        border-bottom: 1px solid $color-border-gray;
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }    
+    }
+  }
+}

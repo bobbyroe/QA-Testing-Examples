@@ -1,0 +1,41 @@
+{% extends "templates/_layout.njk" %}
+
+{% block content %}
+
+<h1 class="h-charlie">
+  Dialog
+</h1>
+<p>
+  Dialogs must announce themselves as a dialog or popup and not trap the user.</p>
+</p>
+<button id="showModal" class="button-alpha">Open dialog</button>
+{% endblock content %}
+
+{% block dialog %}
+
+<dialog role="modal" id="modal" tabindex="-1" aria-label="Select your favorite letter">
+
+  <button type="reset" id="closeModal" class="button-close">
+    <span class="hidden">Close</span>
+  </button>
+  <section>
+    <h2 class="h-bravo">
+      Select your favorite letter
+    </h2>
+    <div class="select-container">
+      <label for="selectAlphaModal">Select a NATO Phoenetic Letter</label>
+      <select id="selectAlphaModal">
+        <option label="None" disabled selected>None</option>
+        <option label="Alpha">Alpha</option>
+        <option label="Bravo">Bravo</option>
+        <option label="Charlie">Charlie</option>
+        <option label="Delta">Delta</option>
+      </select>
+    </div>
+    <button type="submit" id="submitModal" class="button-alpha">
+      Submit
+    </button>
+  </section>
+
+</dialog>
+{% endblock dialog %}

@@ -1,0 +1,155 @@
+.skip-links.container {
+  z-index: 99;
+  @extend .hidden;
+  background: none;
+
+  &:focus-within {
+    @extend .visible;
+  }
+
+  a {
+    display: inline-block;
+    padding: .5rem;
+    margin: .25rem;
+  }
+}
+
+.container {
+  max-width: 640px;
+  margin: 0px auto 0rem auto;
+  padding: 0 1rem;
+}
+
+header {
+  padding-bottom: 2rem;
+  &:focus {
+    outline: none !important;
+  }
+  &:target {
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1
+  }
+}
+#content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+  &:target {
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1
+  }
+}
+
+figure {
+  padding: 1rem 0;
+  border-radius: .5rem;
+  margin-bottom: 4rem;  
+  overflow: auto;
+  // background: white;
+  
+//   background-image: 
+//     /* Shadows */ 
+//     linear-gradient(to right, white, white, rgba(white,0)),
+//     linear-gradient(to right, white, white, rgba(white,0)),
+
+//     /* Shadow covers */ 
+//     linear-gradient(to right, rgba(0,0,0,.25), rgba(white,0)),
+//     linear-gradient(to left, rgba(0,0,0,.25), rgba(white,0));   
+//   background-position: left center, right center, left center, right center;
+// 	background-repeat: no-repeat;
+// 	background-size: 30px 100%, 30px 100%, 10px 100%, 10px 100%;
+// 	/* Opera doesn't support this in the shorthand */
+// 	background-attachment: local, local, scroll, scroll;
+  
+  &.no-scroll {
+    overflow: auto;
+    background: #fff;
+  }
+  
+  figcaption {
+    display: inline-block;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+
+  caption {
+    @extend .hidden;
+  }
+  thead {
+    th {
+      border-bottom: 2px solid #000;
+    }
+  }
+  
+  th {
+    padding: .5rem 1rem .5rem 1rem;
+    border-bottom: 1px solid $color-border-gray;
+  }
+  
+  td {
+    padding: .5rem 1rem .5rem 1rem;
+    border-bottom: 1px solid $color-border-gray;
+  }
+}
+
+footer {
+  border-top: 2px solid $color-border-gray;
+  display: block;
+  padding: 2rem 1rem !important;
+  
+  &:focus {
+    outline: none;
+  }
+  &:target {
+    -webkit-animation: target-fade 3s 1;
+    -moz-animation: target-fade 3s 1
+  }  
+  
+  ul {
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    
+    li {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+    }
+  }
+a {
+  display: inline-block;
+  outline-offset: -.125rem !important;    
+  margin-left: -1rem;
+  padding: .5rem 1rem;
+  }
+}
+
+
+.terms-conditions-container {
+  margin-bottom: 4rem;
+}
+
+.scrolling {
+  height: calc(100vh - 10rem);
+  max-height: 500px;
+  overflow: scroll;
+  background: #fff;
+  border: 1px solid $color-border-gray;
+  border-bottom: none;
+  padding: 1rem;
+}
+

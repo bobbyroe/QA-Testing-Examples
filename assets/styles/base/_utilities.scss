@@ -1,0 +1,60 @@
+
+.hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  max-height: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+
+  &.visible {
+    position: relative;
+    height: auto;
+    width: auto;
+    max-height: 100vh;
+    overflow: auto;
+    clip: auto      ; /* IE6, IE7 */
+    white-space: normal; /* added line */
+    transition: .5s;
+  }
+
+}
+
+%focused {
+  outline: .125rem dotted $color-focus;
+  outline-offset: .125rem;
+}
+
+@mixin focus {
+  &:focus {
+    @extend %focused;
+  }
+  &:active {
+    outline-offset: .125rem;    
+  }
+  &:hover {
+    outline: none;
+  }
+}
+
+
+@mixin break($min,$max:null) {
+  @if $min and $max {
+    @media only screen and (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+  @else if $min not $max {
+    @media only screen and (min-width: $min) {
+      @content;
+    }
+  }
+  @else if $max not $min {
+    @media only screen and (max-width: $max) {
+      @content;
+    }
+  }
+}
+

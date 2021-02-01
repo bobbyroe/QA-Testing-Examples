@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Make page zoomable -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Appears as search results links -->
+    <title>
+      
+        This is a web page
+      
+    </title>
+    <!-- Appears as search results description -->
+    <meta name="description" content="Sanity check for all the html elements" />
+    <link href="/assets/styles/index.processed.css" rel="stylesheet">
+  </head>
+<body>
+<div class="page-container">
+
+<!--   
+<div class="skip-links container">
+  <a href="#nav-primary">Skip to Navigation</a>  
+  <a href="#content">Skip to Main Content</a>  
+  <a href="#footer">Skip to Footer</a>
+</div>
+ -->
+
+<div class="container" id="content" tabindex="-1">
+  
+
+<h1 class="h-charlie">
+  Toggle switches
+</h1>
+
+<p>
+  Switch inputs must identify its name, role and state. We start by letting the screenreader read on its own. Then we'll start at the top manually.</p>
+</p>
+
+<fieldset>
+  <legend>Toggle your options:</legend>
+
+  <input role="switch" class="switch" type="checkbox" id="alpha">
+  <label for="alpha">Alpha</label>
+
+  <input role="switch" class="switch" type="checkbox" id="bravo">
+  <label for="bravo">Bravo</label>
+
+  <input role="switch" class="switch" type="checkbox" id="charlie">
+  <label for="charlie">Charlie</label>
+</fieldset>
+  
+
+</div>
+
+<div class="container" id="footer" tabindex="-1">
+  
+  
+<!--     <a href="https://codepen.io/charlietriplett/project/live/ZpWLBY">All components</a> -->
+    <a href="#content">Back to top of page</a>
+
+  
+</div> 
+</div><!-- end .page-container -->
+
+
+
+  
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/assets/scripts/index.js"></script>
+  </body>
+</html>
