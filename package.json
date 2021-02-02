@@ -1,0 +1,24 @@
+{
+  "name": "qa-testing-examples",
+  "version": "1.0.0",
+  "description": "https://bobbyroe.github.io/QA-Testing-Examples/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobbyroe/QA-Testing-Examples.git"
+  },
+  "keywords": [
+    "Accessibility",
+    "Web",
+    "Test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobbyroe/QA-Testing-Examples/issues"
+  },
+  "homepage": "https://github.com/bobbyroe/QA-Testing-Examples#readme"
+}
