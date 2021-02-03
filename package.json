@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/bobbyroe/QA-Testing-Examples/issues"
   },
-  "homepage": "https://github.com/bobbyroe/QA-Testing-Examples#readme"
+  "homepage": "https://github.com/bobbyroe/QA-Testing-Examples#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
