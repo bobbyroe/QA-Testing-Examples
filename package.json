@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/bobbyroe/QA-Testing-Examples#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-nunjucks": "^5.1.0",
+    "nunjucks": "^3.2.2"
   }
 }
