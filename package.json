@@ -4,6 +4,7 @@
   "description": "https://bobbyroe.github.io/QA-Testing-Examples/",
   "main": "index.js",
   "scripts": {
+    "serve": "gulp serve --continue",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,8 +23,10 @@
   },
   "homepage": "https://github.com/bobbyroe/QA-Testing-Examples#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-nunjucks": "^5.1.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "nunjucks": "^3.2.2"
   }
